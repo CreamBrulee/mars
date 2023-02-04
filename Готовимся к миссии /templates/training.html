@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if "инженер" in title or "строитель" in title %}
+        <h4 style="text-align: center ">Инженерные тренажеры </h4>
+        <img src="{url_for("static", filename="img/mars.jpg")}"
+                        alt="здесь должна была быть картинка, но не нашлась" width=400>
+    {% else %}
+       <h4 style="text-align: center ">Научные симуляторы</h4>
+    {% endif %}
+{% endblock %}
